@@ -28,12 +28,11 @@ $(document).ready(function() {
       Math.random() * 1000
     );
 
-    // var dancer = new makeBlinkyDancer(
-    //   $("body").height() * Math.random(),
-    //   $("body").width() * Math.random(),
-    //   Math.random() * 1000);
-
     $('body').append(dancer.$node);
+
+    $('node').on('click', function (e) {
+
+    });
   });
 });
 

@@ -25,3 +25,22 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+
+
+
+.square{
+  /* position: absolute;
+  animation-name: example;
+  animation-duration: 5s;
+  animation-iteration-count: infinite; */
+  position: absolute;
+}
+
+@keyframes example {
+  0%   {left:0px; top:0px;}
+  25%  {left:(50px); top:0px;}
+  50%  {left:(50px); top:(50px);}
+  75%  {left:0px; top:(50px);}
+  100% {left:0px; top:0px;}
+}
+
