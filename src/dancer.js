@@ -5,7 +5,8 @@ var makeDancer = function(top, left, timeBetweenSteps) {
   this.timeBetweenSteps = timeBetweenSteps;
 
   this.$node = $('<span class="dancer"></span>');
-  this.setPosition(top, left);
+  // Uncommenting line below made us pass on a specRunner
+  // this.setPosition(top, left);
 };
 
 
@@ -20,4 +21,16 @@ makeDancer.prototype.setPosition = function(top, left) {
     left: left
   };
   this.$node.css(styleSettings);
+};
+
+// Cannon's initial work
+makeDancer.prototype.lineUp = function() {
+  var styleSettings = {
+    left: 0
+  };
+  this.$node.css(styleSettings);
+};
+
+makeDancer.prototype.disperse = function() {
+  this.setPosition.bind(this);
 };

@@ -29,10 +29,26 @@ $(document).ready(function() {
     );
 
     $('body').append(dancer.$node);
+    window.dancers.push(dancer);
 
-    $('node').on('click', function (e) {
 
+    // Write function to send eveyrthing to the left
+    // $('span').on('click', function (e) {
+    //   change class that will change display:block
+    // });
+  });
+
+  $('.lineUpButton').on('click', function(event) {
+    window.dancers.forEach(function(dancer) {
+      dancer.lineUp();
     });
   });
+
+  $('.disperseButton').on('click', function(event) {
+    window.dancers.forEach(function(dancer) {
+      dancer.disperse();
+    });
+  });
+
 });
 
