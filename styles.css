@@ -6,7 +6,7 @@ body{
   margin: 0px;
   font-size: 18px;
   position: relative;
-  background: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background: linear-gradient(45deg, #ee7752, #e73c7e, #cc66d2, #c2be46);
   background-size: 300% 300%;
   animation: gradient 3s ease infinite;
 }
@@ -43,10 +43,10 @@ body, a:link, a:visited, a:active{
   border:10px solid red;
   border-radius:10px;
   position:absolute;
-  animation: example3 .75s infinite
+  /* animation: example3 .75s infinite */
 }
 
-@keyframes example3{
+/* @keyframes example3{
   0% {
     transform: scale(0);
   }
@@ -56,7 +56,7 @@ body, a:link, a:visited, a:active{
   100% {
     transform: scale(0);
   }
-}
+} */
 
 .rotate{
   position: absolute;
@@ -84,59 +84,15 @@ body, a:link, a:visited, a:active{
 
 @keyframes example{
     0% {
-      transform: translateX(10px) ;
-    }
-    49% {
-      transform: translateX(50px);
+      transform: translateX(0) ;
     }
     50% {
       transform: translateX(50px) ;
     }
     100% {
-      transform: translateX(10px);
+      transform: translateX(0);
     }
 }
 
 
 
-/* .square {
-  position: absolute;
-  animation: cowmove 5s linear both infinite alternate,
-              rotate 0.3s linear 5s;
-
-}
-
-@keyframes cowmove{
-  from{transform: translateX(200px);}
-  to{transform: translateX(800px);}
-}
-
-@keyframes rotate{
-  from{transform: rotateY(0);}
-  to{transform: rotateY(180deg);}
-} */
-
-
-/*
-.square{
-  position: absolute;
-  transition: 0.5s;
-  animation: cowmove 4s infinite;
-}
-
-
-
-@keyframes cowmove{
-  0% {
-    transform: translateX(10px) rotateY(0deg);
-  }
-  49% {
-    transform: translateX(50px) rotateY(0deg);
-  }
-  50% {
-    transform: translateX(50px) rotateY(360deg);
-  }
-  100% {
-    transform: translateX(10px) rotateY(360deg);
-  }
-} */

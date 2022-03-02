@@ -1,7 +1,7 @@
 var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
 
   makeDancer.apply(this, arguments);
-
+  console.log(arguments);
   // Calling functions below make dancers work but tests not passing (TypeError: this.step is not a function)
   this.step();
   this.setPosition(top, left);
@@ -12,11 +12,6 @@ makeBlinkyDancer.prototype = Object.create(makeDancer.prototype);
 makeBlinkyDancer.prototype.constructor = makeBlinkyDancer;
 
 makeBlinkyDancer.prototype.step = function() {
-  // call the old version of step at the beginning of any call to this new version of step
-  // toggle() is a jQuery method to show/hide the <span> tag.
-  // See http://api.jquery.com/category/effects/ for this and
-  // other effects you can use on a jQuery-wrapped html tag.
-
   makeDancer.prototype.step.call(this);
   this.$node.toggle();
 };
